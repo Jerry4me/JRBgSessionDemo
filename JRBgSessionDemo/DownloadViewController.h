@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  DownloadViewController.h
 //  JRBgSessionDemo
 //
 //  Created by sky on 2017/3/24.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface DownloadViewController : UIViewController
 
 @end
-

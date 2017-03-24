@@ -8,9 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
+typedef void (^completionHandler)();
+
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+/** 后台任务完成block */
+@property (nonatomic, copy) completionHandler handler;
 
 
 @end
