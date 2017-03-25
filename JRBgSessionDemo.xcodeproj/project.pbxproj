@@ -16,6 +16,7 @@
 		33C86F931E84EA15006EF5DD /* DownloadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C86F911E84EA15006EF5DD /* DownloadViewController.m */; };
 		33C86F941E84EA15006EF5DD /* DownloadViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 33C86F921E84EA15006EF5DD /* DownloadViewController.xib */; };
 		33C86F971E84EA83006EF5DD /* JRProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 33C86F961E84EA83006EF5DD /* JRProgressView.m */; };
+		33C86F9A1E861B7F006EF5DD /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 33C86F991E861B7F006EF5DD /* UserNotificationsUI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		33C86F921E84EA15006EF5DD /* DownloadViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DownloadViewController.xib; sourceTree = "<group>"; };
 		33C86F951E84EA83006EF5DD /* JRProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRProgressView.h; sourceTree = "<group>"; };
 		33C86F961E84EA83006EF5DD /* JRProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRProgressView.m; sourceTree = "<group>"; };
+		33C86F991E861B7F006EF5DD /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33C86F9A1E861B7F006EF5DD /* UserNotificationsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -88,6 +91,7 @@
 				33C86F761E84E9D7006EF5DD /* JRBgSessionDemoTests */,
 				33C86F811E84E9D7006EF5DD /* JRBgSessionDemoUITests */,
 				33C86F5B1E84E9D7006EF5DD /* Products */,
+				33C86F981E861B7F006EF5DD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -143,6 +147,14 @@
 				33C86F841E84E9D7006EF5DD /* Info.plist */,
 			);
 			path = JRBgSessionDemoUITests;
+			sourceTree = "<group>";
+		};
+		33C86F981E861B7F006EF5DD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				33C86F991E861B7F006EF5DD /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -512,6 +524,7 @@
 				33C86F891E84E9D7006EF5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33C86F8A1E84E9D7006EF5DD /* Build configuration list for PBXNativeTarget "JRBgSessionDemoTests" */ = {
 			isa = XCConfigurationList;
@@ -520,6 +533,7 @@
 				33C86F8C1E84E9D7006EF5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		33C86F8D1E84E9D7006EF5DD /* Build configuration list for PBXNativeTarget "JRBgSessionDemoUITests" */ = {
 			isa = XCConfigurationList;
@@ -528,6 +542,7 @@
 				33C86F8F1E84E9D7006EF5DD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

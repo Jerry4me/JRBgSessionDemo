@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "DownloadViewController.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface AppDelegate ()
 
@@ -25,6 +26,17 @@
     
     
     [self.window makeKeyAndVisible];
+    
+    // 询问用户是否允许发送通知
+    [[UNUserNotificationCenter currentNotificationCenter] requestAuthorizationWithOptions:UNAuthorizationOptionAlert completionHandler:^(BOOL granted, NSError * _Nullable error) {
+        
+        if (granted) {
+            NSLog(@"允许发送通知");
+        } else {
+            NSLog(@"不允许发送通知");
+        }
+        
+    }];
     
     
     return YES;

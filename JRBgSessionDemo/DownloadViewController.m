@@ -9,6 +9,7 @@
 #import "DownloadViewController.h"
 #import "JRProgressView.h"
 #import "AppDelegate.h"
+#import <UserNotifications/UserNotifications.h>
 
 @interface DownloadViewController () <NSURLSessionDelegate,NSURLSessionDownloadDelegate>
 
@@ -80,6 +81,16 @@
 
 - (void)URLSession:(NSURLSession *)session downloadTask:(NSURLSessionDownloadTask *)downloadTask didFinishDownloadingToURL:(NSURL *)location
 {
+
+    // 通知用户下载完成
+    UNUserNotificationCenter *noti = [UNUserNotificationCenter currentNotificationCenter];
+    
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc] init];
+    content.body = @"下载完成";
+    
+    [noti addNotificationRequest:[UNNotificationRequest requestWithIdentifier:@"noti" content:content  trigger:[UNTimeIntervalNotificationTrigger triggerWithTimeInterval:0.1 repeats:NO]] withCompletionHandler:^(NSError * _Nullable error) {
+        NSLog(@"通知完成");
+    }];
 
     NSLog(@"%s", __func__);
     
